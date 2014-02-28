@@ -371,7 +371,7 @@
   }, {
     selector: 'input',
     events: ['propertychange', 'input', 'change'],
-    update: function($el, val) { $el.val(val); },
+    update: function($el, val) { $el.val($('<div/>').html(val).text()); } // unescape html
     getVal: function($el) {
       return $el.val();
     }
